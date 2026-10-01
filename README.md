@@ -20,3 +20,5 @@ No dependencies, analytics, data upload, persistent browser storage, payment col
 `npm run dev` serves only this directory on 127.0.0.1:4178. The source and observed previous mathematical review are linked publicly; no credentials or personal contact address are included.
 
 The website is a demand experiment. A working calculator/page is not proof of buyer demand, a paid assignment or earned money.
+
+The software is available under the [MIT license](LICENSE). The license permits use and modification with attribution; it does not certify the accuracy of any customer's data or result.

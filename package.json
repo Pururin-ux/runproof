@@ -1,6 +1,7 @@
 {
   "name": "runproof",
   "private": true,
+  "license": "MIT",
   "type": "module",
   "scripts": { "test": "node --test test/*.test.mjs", "dev": "node serve.mjs" },
   "engines": { "node": ">=22" }
