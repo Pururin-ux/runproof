@@ -1,0 +1,9 @@
+{
+  "name": "runproof",
+  "main": "worker.mjs",
+  "compatibility_date": "2026-10-01",
+  "workers_dev": true,
+  "rules": [
+    { "type": "Text", "globs": ["**/*.html", "**/*.css", "**/*.mjs.txt"], "fallthrough": true }
+  ]
+}

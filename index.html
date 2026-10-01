@@ -1,0 +1,77 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Independently verify one calculation or data claim. Get runnable Python, observed output and a clear report. Try a private, browser-local CSV total check free.">
+  <meta name="color-scheme" content="light">
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'; style-src 'self'; connect-src 'none'; img-src 'self' data:; base-uri 'none'; form-action 'none'">
+  <title>Runproof — a calculation you can rerun</title>
+  <link rel="stylesheet" href="style.css">
+  <script type="module" src="app.mjs"></script>
+</head>
+<body>
+  <a class="skip" href="#main">Skip to content</a>
+  <header class="site-header wrap">
+    <a class="brand" href="#" aria-label="Runproof home"><span class="brand-mark" aria-hidden="true">r<span>p</span></span>runproof</a>
+    <nav aria-label="Main"><a href="#sample">Work sample</a><a href="#tool">Free CSV check</a><a class="nav-cta" href="#request">Request a check <span aria-hidden="true">↗</span></a></nav>
+  </header>
+  <main id="main">
+    <section class="hero wrap">
+      <div class="hero-copy">
+        <p class="eyebrow"><span class="dot" aria-hidden="true"></span> Independent calculation checks</p>
+        <h1>One claim.<br>A calculation<br>you can <em>rerun.</em></h1>
+        <p class="hero-text">A formula, a data total, a numerical result. Get an independent check with runnable Python, actual output and the limits stated clearly.</p>
+        <div class="hero-actions"><a class="button primary" href="#request">Discuss a $25 check <span aria-hidden="true">↗</span></a><a class="text-link" href="#sample">See the evidence <span aria-hidden="true">↓</span></a></div>
+        <p class="quiet">Fixed scope agreed first. No account or payment to inquire.</p>
+      </div>
+      <div class="evidence-card" aria-label="Summary of an accepted mathematical review">
+        <div class="card-top"><span>From an accepted, paid review</span><span class="card-index">01 / 09</span></div>
+        <div class="formula">p<sup>q³</sup> ≡ ±1 <span>(mod q⁵)</span></div>
+        <p class="card-subtitle">Prime-sequence minimum · first nine terms</p>
+        <div class="checkline"><span class="check" aria-hidden="true">✓</span><span>Independent CRT enumeration</span></div>
+        <div class="checkline"><span class="check" aria-hidden="true">✓</span><span>Exact primality verification</span></div>
+        <div class="checkline"><span class="check" aria-hidden="true">✓</span><span>Exhaustive small-case cross-checks</span></div>
+        <div class="terminal"><span class="terminal-label">Observed output</span><code>a(1..9) = 3, 17, 199, 22051,<br>387199, 52246349, 3753373051,<br>3884699495951, 325259546614001</code></div>
+        <div class="card-bottom"><span>Source + output included</span><a href="https://gist.github.com/Pururin-ux/16ec01f876a7f2a400b74749ccb1d51c" target="_blank" rel="noopener">Open review ↗</a></div>
+      </div>
+    </section>
+    <div class="scope-strip"><div class="wrap"><span>FORMULAS & UNITS</span><span>CSV TOTALS & STATISTICS</span><span>NUMERICAL SEQUENCES</span><span>REPRODUCIBLE RESULTS</span></div></div>
+    <section class="section wrap" id="sample">
+      <div class="section-heading"><p class="eyebrow">The deliverable</p><h2>Follow every step<br>back to the source.</h2><p>The result may reproduce, differ, or remain unresolved. You receive the evidence either way.</p></div>
+      <div class="deliverables">
+        <article><span class="step-number">01</span><h3>A clear verdict</h3><p>What was checked, the result, assumptions, relevant edge cases and what the check cannot establish.</p></article>
+        <article><span class="step-number">02</span><h3>Code you can run</h3><p>Independent Python, run instructions and actual output. Dependencies and input provenance are documented.</p></article>
+        <article><span class="step-number">03</span><h3>A bounded check</h3><p>One agreed claim, price and deadline. Larger tasks get a separate quote before any work is committed.</p></article>
+      </div>
+      <div class="sample-note"><strong>Published work sample</strong><p>An accepted, paid review re-derived the first nine terms of a prime sequence. Terms ten and eleven were outside the verified range.</p><a class="text-link" href="https://gist.github.com/Pururin-ux/16ec01f876a7f2a400b74749ccb1d51c" target="_blank" rel="noopener">Read source, method & observed output ↗</a></div>
+    </section>
+    <section class="tool-section" id="tool"><div class="wrap">
+      <div class="tool-heading"><div><p class="eyebrow">A small free tool</p><h2>Check a CSV total.<br>Take the verifier with you.</h2></div><p>Exact decimal addition, missing-value checks and optional repeated-ID warnings. Your file stays in this browser.</p></div>
+      <div class="tool-grid">
+        <div class="tool-input">
+          <label class="file-zone" for="csv-file"><span class="file-icon" aria-hidden="true">↥</span><strong>Choose a CSV file</strong><span>UTF-8 · comma-separated · up to 2 MiB</span><input id="csv-file" type="file" accept=".csv,text/csv"></label>
+          <button class="demo-button" type="button" id="demo">Or try a synthetic example ↗</button>
+          <p class="file-name" id="file-name">No file selected.</p>
+          <div class="field-pair"><div><label for="amount-column">Decimal column</label><select id="amount-column" disabled><option>Select a file first</option></select></div><div><label for="id-column">ID column <span class="optional">optional</span></label><select id="id-column" disabled><option>No ID check</option></select></div></div>
+          <label for="expected">Expected total <span class="optional">optional</span></label><input id="expected" inputmode="decimal" placeholder="e.g. 1250.75" maxlength="85">
+          <button class="button primary full" type="button" id="run" disabled>Check this column <span aria-hidden="true">→</span></button>
+          <p class="tool-limits">Plain decimals only; no currency signs, thousands separators or exponents. Up to 20,000 records and 64 columns. Empty or invalid amounts block the total.</p>
+        </div>
+        <div class="tool-result" aria-live="polite" aria-atomic="true">
+          <p class="eyebrow">Result</p><h3 id="verdict">Ready when you are.</h3><p id="result-description">Choose a file or use the example. The check covers one column, not the correctness of your whole dataset.</p>
+          <dl class="result-stats"><div><dt>Data records</dt><dd id="records">—</dd></div><div><dt>Exact total</dt><dd id="total">—</dd></div><div><dt>Total − expected</dt><dd id="difference">—</dd></div></dl>
+          <ul id="warnings" class="warnings"></ul>
+          <div id="downloads" hidden><button class="button secondary" type="button" id="download-python">Download Python verifier ↓</button><button class="text-button" type="button" id="download-report">Download result JSON ↓</button><p class="quiet">Run <code>python verify.py your.csv</code>. The verifier requires the same file SHA-256 and independently recalculates with Python’s csv and Decimal.</p><details><summary>View verifier source</summary><pre id="verifier-preview"></pre></details><p class="hash" id="hash"></p></div>
+          <p class="result-scope">Matching totals alone do not prove complete or correct source records. Repeated IDs may be legitimate. This tool does not certify a study, financial statement or model.</p>
+        </div>
+      </div>
+    </div></section>
+    <section class="section wrap request-section" id="request">
+      <div class="request-copy"><p class="eyebrow">Start with the question</p><h2>Have a result<br>you want checked?</h2><p>Send the claim, what you expect and a redacted sample or public source link. The exact scope, fixed price, deadline and payment network are agreed before starting.</p><p class="payment-note">Small checks: <strong>$25 USD</strong> equivalent. Payment by agreed USDT/USDC network or XNO. No card or deposit required to discuss a task.</p></div>
+      <div class="request-form"><label for="brief">A short, non-confidential brief</label><textarea id="brief" rows="5" maxlength="1200" placeholder="I have one formula / CSV-derived total / sequence. I want to check… The expected result is… The source is…"></textarea><p class="quiet">This text stays in your browser. The next button opens a public GitHub issue draft for you to review. Do not include private files, personal data or credentials.</p><a class="button primary full" id="github-inquiry" href="https://github.com/Pururin-ux/runproof/issues/new?title=Calculation%20check%20inquiry" target="_blank" rel="noopener">Open a public inquiry draft ↗</a><a class="text-link" href="https://x.com/allissonqnft" target="_blank" rel="noopener">Prefer a private conversation? Contact on X ↗</a><p class="quiet">No brief is sent or saved by this page. Need a private file exchange? Agree a suitable channel before sharing it.</p></div>
+    </section>
+    <footer class="wrap footer"><a class="brand" href="#">runproof</a><p>Independent checks by <a href="https://github.com/Pururin-ux" target="_blank" rel="noopener">Pururin-ux</a>.</p><a href="https://github.com/Pururin-ux/runproof" target="_blank" rel="noopener">Tool source ↗</a><span>No tracking · files stay local</span></footer>
+  </main>
+</body>
+</html>
