@@ -2,6 +2,10 @@
 
 A small service experiment: one independently checked calculation, runnable source, actual output and stated limits. Proposed pilot price USD25; **no customer order or revenue yet**.
 
+![Runproof desktop preview](assets/runproof-desktop-preview.jpg)
+
+Rendered preview of this project's own service page. The checker is available in the source; a public hosted address has not yet been confirmed.
+
 The free CSV tool runs locally in the browser. It checks one decimal column against an optional expected total and generates a file-hash-bound Python verifier. It does not validate an entire dataset or infer whether duplicate records are errors.
 
 ## Supported input
