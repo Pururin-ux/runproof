@@ -4,7 +4,7 @@ A small service experiment: one independently checked calculation, runnable sour
 
 ![Runproof desktop preview](assets/runproof-desktop-preview.jpg)
 
-Rendered preview of this project's own service page. A [temporary public HTTPS demo](https://pearl-sun-walking-widely.trycloudflare.com) was verified on2026-10-02: the page and three browser assets matched the local source byte for byte. The address works while the local demo and tunnel processes run; permanent hosting is still pending.
+Rendered preview of this project's own service page. The [public HTTPS demo](https://runproof.allisonqq.chatgpt.site) was published through Sites on2026-10-02. Its four runtime files are copied unchanged from this project's verified source. Publication succeeded independently of a local server or tunnel; no new public-browser interaction test is claimed. The earlier temporary tunnel address is no longer available.
 
 The free CSV tool runs locally in the browser. It checks one decimal column against an optional expected total and generates a file-hash-bound Python verifier. It does not validate an entire dataset or infer whether duplicate records are errors.
 
